@@ -1,0 +1,39 @@
+
+<mat-card class="card-f">
+<div class="di">
+  <button mat-icon-button (click)="crearPersona()">
+    
+    <mat-icon>add</mat-icon>
+</button>
+<h1 class="h1">Listado de Pasajeros </h1>
+</div>
+
+<div *ngFor="let pers of personList" class="persona-container">
+  <div class="container">
+    
+    
+    <span>Nombre: {{pers.lastName}}</span>
+    <br>
+    <span>Apellido: {{pers.age}}</span>
+    <br>
+    <span>Edad: {{pers.firstName}}</span>
+    
+    <div *ngIf="pers.age >= 18">
+      <span style="font-weight: bold">Es mayor de edad</span>
+    </div>
+
+    <div *ngIf="pers.age < 18">
+      <span style="font-weight: bold ; color: red">Es menor de edad</span>
+    </div>
+  
+</div>
+  <button class="list-btn" mat-raised-button  (click)="seleccionarPersona(pers)">Editar</button>
+
+  
+  <button mat-raised-button class="list-btn" (click)="borrarPersona(pers)">Borrar</button>
+
+
+</div>
+
+
+</mat-card>

@@ -1,0 +1,84 @@
+<mat-card class="cole-container" style="min-width: 875px; padding: 20px">
+  <div class="title">
+    
+    <mat-card-title style="color:black" class="cole-title">   Crear / editar colectivo </mat-card-title>
+  </div>
+
+  <mat-card-content class="cole-content">
+    <form [formGroup]="busForm" (ngSubmit)="saveChanges()">
+      <div style="display: flex; gap: 15px; margin-bottom: 15px">
+        <mat-form-field style="width: 33%">
+          <mat-label>Patente: </mat-label>
+          <input matInput type="text" formControlName="patente"/>
+
+          <div
+            *ngIf="
+              busForm.controls['patente'].invalid &&
+              (busForm.controls['patente'].dirty ||
+                busForm.controls['patente'].touched)
+            "
+          >
+            <mat-hint
+              class="hint"
+              *ngIf="busForm.controls['patente'].errors?.['required']"
+            >
+              Complete el campo
+            </mat-hint>
+          </div>
+        </mat-form-field>
+
+        <mat-form-field style="width: 33%">
+          <mat-label>Cantidad de asientos: </mat-label>
+          <input matInput type="text" formControlName="cantidadAsientos"/>
+
+          <div
+            *ngIf="
+              busForm.controls['cantidadAsientos'].invalid &&
+              (busForm.controls['cantidadAsientos'].dirty ||
+                busForm.controls['cantidadAsientos'].touched)
+            "
+          >
+            <mat-hint
+              class="hint"
+              *ngIf="busForm.controls['cantidadAsientos'].errors?.['required']"
+            >
+              Complete el campo
+            </mat-hint>
+          </div>
+        </mat-form-field>
+
+        <mat-form-field style="width: 33%">
+          <mat-label>Id Modelo: </mat-label>
+          <input matInput type="text" formControlName="modeloId" />
+
+          <div
+            *ngIf="
+              busForm.controls['modeloId'].invalid &&
+              (busForm.controls['modeloId'].dirty ||
+                busForm.controls['modeloId'].touched)
+            "
+          >
+            <mat-hint
+              class="hint"
+              *ngIf="busForm.controls['modeloId'].errors?.['required']"
+            >
+              Complete el campo
+            </mat-hint>
+          </div>
+        </mat-form-field>
+      </div>
+      <button style="color:black" type="button"class="cole-go-back-button" (click)="goBack()">
+        <mat-icon style="color:black">arrow_back</mat-icon>
+      </button>
+  
+      <button
+        type="submit"
+        style="float: right"
+        mat-button
+        [disabled]="busForm.invalid"
+      >
+        GUARDAR
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

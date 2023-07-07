@@ -1,0 +1,12 @@
+.table {
+    width: 100%;
+  }
+  
+  .list-container {
+      margin: 10px;
+  }
+
+  .diii {
+    display: flex ; 
+    color: black;
+  }

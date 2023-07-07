@@ -1,0 +1,22 @@
+<mat-nav-list style="padding: 15px">
+
+  <mat-list-item  (click)="navegar('/person/list')">
+    <a routerLink="/buses/list">
+    <mat-icon class="icon" mat-list-icon>person</mat-icon>
+    <h4 style='color: black ; font-weight: bold;' mat-line *ngIf="isExpanded">Personas</h4>
+  </a>
+  </mat-list-item>
+
+  <mat-list-item >
+    <a routerLink="/buses/list">
+      <mat-icon  class="icon" mat-list-icon>directions_bus</mat-icon>
+      <h4 style='color: black ; font-weight: bold;'mat-line *ngIf="isExpanded">Colectivos</h4>
+    </a>
+  </mat-list-item>
+  <mat-list-item>
+    <a routerLink="/trips/list">
+      <mat-icon class="icon" mat-list-icon>fork_right</mat-icon>
+      <h4 style='color: black ;  font-weight: bold;' mat-line *ngIf="isExpanded">Viajes</h4>
+    </a>
+  </mat-list-item>
+</mat-nav-list>

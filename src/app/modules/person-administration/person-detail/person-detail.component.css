@@ -1,0 +1,21 @@
+.persona-container {
+    display: flex;
+    flex-direction: column;
+    background: rgb(243, 243, 243);
+    height: 100%;
+  }
+  
+  .person-input {
+    width: 50%;
+    align-self: center;
+  }
+  
+  .title {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .go-back-button {
+    bottom: 7px;
+  }
+  .dii{ height: 100%;}

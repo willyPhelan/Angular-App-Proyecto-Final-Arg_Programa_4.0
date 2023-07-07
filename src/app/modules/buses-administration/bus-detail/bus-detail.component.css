@@ -1,0 +1,28 @@
+.cole-container {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../../../subte-bus.png') ;
+    background-repeat: no-repeat;
+    
+    background-position: center;
+    background-color: rgba(59, 183, 255, 0.397)         ;
+    
+  }
+  
+  .cole-input {
+    width: 50%;
+    align-self: center;
+  }
+  
+  .cole-title {
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+  }
+  
+  .cole-go-back-button {
+    bottom: 7px;
+    border: none;
+    background: none;
+    color: black;
+   }
